@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { 
   FiHome, 
   FiLayers, 
-  FiBeaker, 
+  FiFlask, 
   FiZap, 
   FiSettings,
   FiPlus
@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Dashboard', href: '/', icon: FiHome },
   { name: 'Nouveau Projet', href: '/project/setup', icon: FiPlus },
   { name: 'UI Lab', href: '/ui-lab', icon: FiLayers },
-  { name: 'Studio R&D', href: '/studio-rd', icon: FiBeaker },
+  { name: 'Studio R&D', href: '/studio-rd', icon: FiFlask },
 ]
 
 const Sidebar: React.FC = () => {

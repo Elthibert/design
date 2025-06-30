@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FiPlus, FiFolder, FiClock, FiTrendingUp, FiLayers, FiBeaker } from 'react-icons/fi'
+import { FiPlus, FiFolder, FiClock, FiTrendingUp, FiLayers, FiFlask } from 'react-icons/fi'
 
 const Dashboard: React.FC = () => {
   const recentProjects = [
@@ -13,7 +13,7 @@ const Dashboard: React.FC = () => {
   const stats = [
     { label: 'Projets Actifs', value: '3', icon: FiFolder, color: 'text-primary-400' },
     { label: 'Blocs Créés', value: '47', icon: FiLayers, color: 'text-green-400' },
-    { label: 'Concepts UI Lab', value: '12', icon: FiBeaker, color: 'text-purple-400' },
+    { label: 'Concepts UI Lab', value: '12', icon: FiFlask, color: 'text-purple-400' },
     { label: 'Temps Moyen', value: '2.3h', icon: FiClock, color: 'text-orange-400' },
   ]
 
@@ -142,7 +142,7 @@ const Dashboard: React.FC = () => {
         <Link to="/studio-rd" className="glass-effect rounded-xl p-6 hover:bg-gray-800/30 transition-colors group">
           <div className="flex items-center space-x-4 mb-4">
             <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <FiBeaker className="w-6 h-6 text-white" />
+              <FiFlask className="w-6 h-6 text-white" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-white">Studio R&D</h3>

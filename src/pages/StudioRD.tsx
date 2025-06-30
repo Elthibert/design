@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiBeaker, FiPlay, FiLightbulb, FiTarget } from 'react-icons/fi'
+import { FiFlask, FiPlay, FiLightbulb, FiTarget } from 'react-icons/fi'
 
 const StudioRD: React.FC = () => {
   const [sessionType, setSessionType] = useState<'invention' | 'study' | null>(null)
@@ -19,7 +19,7 @@ const StudioRD: React.FC = () => {
         className="text-center mb-12"
       >
         <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-          <FiBeaker className="w-8 h-8 text-white" />
+          <FiFlask className="w-8 h-8 text-white" />
         </div>
         <h1 className="text-3xl font-bold text-white mb-4">Studio R&D</h1>
         <p className="text-gray-400 max-w-2xl mx-auto">
