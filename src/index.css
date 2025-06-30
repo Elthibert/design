@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply dark;
+  }
+  
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+  }
+  
+  * {
+    @apply border-gray-800;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-gray-900/50 backdrop-blur-xl border border-gray-800/50;
+  }
+  
+  .gradient-border {
+    @apply relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-primary-500 to-purple-500;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-primary-500/25 hover:scale-105 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-100 font-medium px-6 py-3 rounded-lg transition-all duration-200 border border-gray-700 hover:border-gray-600;
+  }
+  
+  .input-field {
+    @apply bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200;
+  }
+  
+  .textarea-field {
+    @apply bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 resize-none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Selection */
+::selection {
+  @apply bg-primary-500/30;
+}
